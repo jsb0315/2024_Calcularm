@@ -2,4 +2,5 @@
 
 Made with Expo <br>
 <code>npm install -g react-native-cli</code> <br/>
+<code>npm install -g expo-cli</code> <br/>
 <code>npm start</code>
