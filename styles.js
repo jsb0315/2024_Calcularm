@@ -1,5 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { ScrollView } from 'react-native-web';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { height, width } = Dimensions.get('window');
 
 const baseButtonStyle = {
     flex: 1,
@@ -10,24 +11,58 @@ const baseButtonStyle = {
   };
   
   export const styles = StyleSheet.create({
-    container: {
+    mainscroll:{
+      // flex: 1,
+      backgroundColor: '#1c1c1c',
+    },
+    page: {
       flex: 1,
+      height: height,
       justifyContent: 'flex-end',
-      backgroundColor: '#000',
       paddingBottom: 60,
     },
+    page1:{
+      width: width*0.85,
+      backgroundColor: '#1c1c1c',
+    },
+    page2:{
+      width: width,
+      backgroundColor: '#000',
+      borderRadius: 30,
+    },
+    display:{
+      zIndex: 1,
+      flexDirection: 'row',
+    },
     ScrollView: {
+      // flexDirection: 'column',
       alignItems: 'flex-end',
+      // justifyContent: 'center',
+      width: width-32,
       textAlign: 'right',
-      paddingRight: 20,
-      paddingLeft: 20,
       marginBottom: '1%', 
     },
-    display: {
+    shadow1:{
+      zIndex: 1,
+      height: "100%",
+      borderLeftWidth: 16,
+      shadowOffset: { width:10, height: 0 },
+      shadowOpacity: 0,
+      shadowRadius: 4,
+    },
+    shadow2:{
+      zIndex: 1,
+      height: "100%",
+      borderLeftWidth: 16,
+      shadowOffset: { width:-10, height: 0 },
+      shadowOpacity: 0,
+      shadowRadius: 4,
+    },
+    result1: {
       fontSize: 72,
       color: 'white',
     },
-    result: {
+    result2: {
       fontSize: 24,
       color: '#888',
       textAlign: 'right',
@@ -57,8 +92,8 @@ const baseButtonStyle = {
     btnbox2: {
       position:'absolute',
       backgroundColor: 'white',
-      left: 1,
-      top: 1,
+      left: 0.8,
+      top: 0.7,
       height: '98%',
       width: '98%',
       borderRadius: 100,
@@ -82,13 +117,36 @@ const baseButtonStyle = {
     },
     ObuttonText: {
       color: 'white',
-      bottom: 3,
+      bottom: 4,
       fontSize: 54,
       fontWeight: '300',
     },
-    image: {
-      right: 2,
-      width: 50,
-      height:50,
+    back: {
+      // right: 2,
+      // width: 40,
+      height:'44%',
+      aspectRatio: 1, 
+      resizeMode: 'contain',
+    },
+    calc: {
+      height:'42%',
+      aspectRatio: 1, 
+      resizeMode: 'contain',
+    },
+    comple: {
+      height:'33%',
+      aspectRatio: 1, 
+      resizeMode: 'contain',
+    },
+    listcont:{
+      position: 'absolute',
+      top: '8%',
+      left: 0,
+      marginLeft: 18,
+    },
+    list: {
+      height:22,
+      aspectRatio: 1, 
+      resizeMode: 'contain',
     },
   });
